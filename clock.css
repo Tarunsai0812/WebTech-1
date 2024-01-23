@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+
+  .wall {
+    background-image: url('wall.jpg'); 
+    background-size: cover;
+    min-height: 92%;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .clock-face {
+    position: absolute;
+    top: 35%;
+    left: 65%;
+    background-image: url("clock.png");
+    background-size: contain;
+    width: 230px;
+    height: 230px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: -12px 19px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .nob{
+    position: relative;
+    top: 48%;
+    left: 47.8%;
+    z-index: 1;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #00cafe;
+
+  }
+
+  .hour-box, .minute-box, .second-box {
+    position: absolute;
+    width: 230px;
+    height: 230px; 
+    top: 0;
+  }
+
+  .hour-hand{
+    position: relative;
+    height: 50px;
+    width: 5px;
+    top: 65px;
+    left: 49%;
+    border-radius: 80%;
+    background-color: red;
+  }
+
+  .minute-hand{
+    position: relative;
+    height: 80px;
+    width: 3px;
+    top: 35px;
+    left: 49.5%;
+    border-radius: 80%;
+    background-color: black;
+  }
+  .second-hand{
+    position: relative;
+    height: 90px;
+    width: 2px;
+    top: 25px;
+    left: 49.5%;
+    border-radius: 80%;
+    background-color: rgb(255, 195, 45);
+  }

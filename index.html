@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Page Title</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img
+        width="100px"
+        height="80px"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJp7g0j3bMYfnK9ZwQD5lTPDTGeOB052qcGNiCdUcZ9w&s"
+        alt=""
+      />
+      <div class="marquee-container">
+        <marquee>
+          <h1>ANIL NEERUKONDA INSTITUTE OF TECHNOLOGY AND SCIENCES</h1>
+        </marquee>
+      </div>
+    </header>
+    <div id="container">
+      <div id="left">
+        <ul>
+          <h1>Departments</h1>
+          <button onclick="loadContent('csedetails.html')">CSE</button>
+          <button onclick="loadContent('ecedetails.html')">ECE</button>
+          <button onclick="loadContent('itdetails.html')">IT</button>
+          <h1>Universities Info</h1>
+          <button onclick="loadContent('university.html')">Universities</button>
+          <h1>Schedule</h1>
+          <button onclick="loadContent('timetable.html')">Time Table</button>
+          <h1>Personal Info</h1>
+          <button onclick="loadContent('resume.html')">Resume</button>
+          <h1>Time</h1>
+          <button onclick="loadContent2('clock2.html')">Wall Clock</button>
+          <h1>Game</h1>
+          <button onclick="loadContent2('game.html')">Tetris</button>
+          <br /><br /><br /><br />
+        </ul>
+      </div>
+      <div id="right-section">
+        <nav>
+          <div id="themeChanger">
+            <span style="background-color: #00da5b"></span>
+            <span style="background-color: #33ff57"></span>
+            <span style="background-color: #ffa200"></span>
+            <span style="background-color: #ff7ac1"></span>
+            <span style="background-color: #000000"></span>
+          </div>
+          <button onclick="loadContent('login.html')">Login</button>
+          <button onclick="loadContent('registration.html')">Register</button>
+        </nav>
+        <div id="right">
+          <div id="content-placeholder"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function loadContent(page) {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("right").innerHTML = this.responseText;
+          }
+        };
+        xhr.open("GET", page, true);
+        xhr.send();
+      }
+
+      function loadContent2(page){
+        document.getElementById('right').innerHTML = '<iframe src="' + page + '" width="100%" height="91%" frameborder="0"></iframe>';
+
+      }
+
+      const spans = document.querySelectorAll("span");
+
+      spans.forEach((span, index) => {
+        span.addEventListener("click", () => {
+          switch (index) {
+            case 0:
+              document.body.style.fontFamily = "Arial, sans-serif";
+              document.getElementById("left").style.backgroundColor = "#E0EEC6";
+              document.querySelectorAll("#left button").forEach((element) => {
+                element.addEventListener("mouseover", function () {
+                  this.style.backgroundColor = "#243E36";
+                  this.style.color = "white";
+                });
+                element.style.backgroundColor = "#7CA982";
+                element.style.color = "black";
+                element.addEventListener("mouseout", function () {
+                  this.style.backgroundColor = "#7CA982";
+                  this.style.color = "black";
+                });
+              });
+              document.querySelector("header").style.backgroundColor = "#C2A83E";
+              document.querySelector("#right-section nav").style.backgroundColor = "#F1F7ED";
+              document.querySelector("#body").style.backgroundColor = "#AECCA4"
+
+              break;
+            case 1:
+                document.body.style.fontFamily = "Arial, sans-serif";
+                  document.getElementById("left").style.backgroundColor = "#D6F9DD";
+                  document.querySelectorAll("#left button").forEach((element) => {
+                    element.addEventListener("mouseover", function () {
+                      this.style.backgroundColor = "#ABDF75";
+                    });
+                    element.style.backgroundColor = "#99F7AB";
+                    element.addEventListener("mouseout", function () {
+                      this.style.backgroundColor = "#99F7AB";
+                    });
+                  });
+                  document.querySelector("header").style.backgroundColor = "#C5D6D8";
+                  document.querySelector("#right-section nav").style.backgroundColor = "#60695C";
+                  document.querySelector("#body").style.backgroundColor = "#B8F8C4"
+              document.body.style.fontFamily =
+                "Verdana, Geneva, Tahoma, sans-serif";
+              break;
+            case 2:
+            document.body.style.fontFamily = "Arial, sans-serif";
+                  document.getElementById("left").style.backgroundColor = "#5CD2E6";
+                  document.querySelectorAll("#left button").forEach((element) => {
+                    element.addEventListener("mouseover", function () {
+                      this.style.backgroundColor = "#1E4348";
+                      this.style.color = "white";
+                    });
+                    element.style.backgroundColor = "#F4E869";
+                    element.style.color = "black";
+                    element.addEventListener("mouseout", function () {
+                      this.style.backgroundColor = "#F4E869";
+                      this.style.color = "black";
+                    });
+                  });
+                  document.querySelector("header").style.backgroundColor = "#FF9209";
+                  document.querySelector("#right-section nav").style.backgroundColor = "#3085C3";
+                  document.querySelector("#body").style.backgroundColor = "#FAF2D3"
+              break;
+            case 3:
+            document.body.style.fontFamily = "Arial, sans-serif";
+                  document.getElementById("left").style.backgroundColor = "#FFF6F6";
+                  document.querySelectorAll("#left button").forEach((element) => {
+                    element.addEventListener("mouseover", function () {
+                      this.style.backgroundColor = "#F875AA";
+                      this.style.color = "white";
+                    });
+                    element.style.backgroundColor = "#FFDFDF";
+                    element.style.color = "black";
+                    element.addEventListener("mouseout", function () {
+                      this.style.backgroundColor = "#FFDFDF";
+                      this.style.color = "black";
+                    });
+                  });
+                  document.querySelector("header").style.backgroundColor = "#AEDEFC";
+                  document.querySelector("#right-section nav").style.backgroundColor = "#7071E8";
+                  document.querySelector("#body").style.backgroundColor = "#FFE4D6"
+              break;
+            case 4:
+                  document.body.style.fontFamily = "Arial, sans-serif";
+                  document.getElementById("left").style.backgroundColor = "#F6B17A";
+                  document.querySelectorAll("#left button").forEach((element) => {
+                    element.addEventListener("mouseover", function () {
+                      this.style.backgroundColor = "#2D3250";
+                    });
+                    element.style.backgroundColor = "#7077A1";
+                    element.style.color = "white";
+                    element.addEventListener("mouseout", function () {
+                      this.style.backgroundColor = "#7077A1";
+                    });
+                  });
+                  document.querySelector("header").style.backgroundColor = "#424769";
+                  document.querySelector("h1").style.color = "white";
+                  document.querySelector("#right-section nav").style.backgroundColor = "#F05941";
+                  document.querySelector("#body").style.backgroundColor = "#F5E8C7"
+                  break;
+            default:
+            document.body.style.fontFamily = "Arial, sans-serif";
+                  document.getElementById("left").style.backgroundColor = "#E0EEC6";
+                  document.querySelectorAll("#left button").forEach((element) => {
+                    element.addEventListener("mouseover", function () {
+                      this.style.backgroundColor = "#243E36";
+                      this.style.color = "white";
+                    });
+                    element.style.backgroundColor = "#7CA982";
+                    element.style.color = "black";
+                    element.addEventListener("mouseout", function () {
+                      this.style.backgroundColor = "#7CA982";
+                      this.style.color = "black";
+                    });
+                  });
+                  document.querySelector("header").style.backgroundColor = "#C2A83E";
+                  document.querySelector("#right-section nav").style.backgroundColor = "#F1F7ED";
+                  document.querySelector("#body").style.backgroundColor = "#AECCA4"
+              break;
+          }
+        });
+      });
+    </script>
+    <script src="clock.js"></script>
+  </body>
+</html>

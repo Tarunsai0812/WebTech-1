@@ -1,0 +1,188 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.wall {
+  background-image: url("wall.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.clockframe {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  border-radius: 175px;
+  background: #99e3f0;
+  box-shadow: 25px 25px 54px #364756, -25px -25px 54px #405568;
+  box-shadow: -12px 19px 10px rgba(0, 0, 0, 0.5);
+}
+.clock-face {
+  position: relative;
+  background-size: contain;
+  top: 10px;
+  left: 10px;
+  width: 230px;
+  height: 230px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.nob {
+  position: relative;
+  top: 48%;
+  left: 47.8%;
+  z-index: 1;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #00cafe;
+}
+
+.hour-box,
+.minute-box,
+.second-box {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  top: 0;
+}
+
+.hour-hand {
+  position: relative;
+  height: 50px;
+  width: 5px;
+  top: 65px;
+  left: 49%;
+  border-radius: 80%;
+  background-color: red;
+}
+
+.minute-hand {
+  position: relative;
+  height: 80px;
+  width: 3px;
+  top: 35px;
+  left: 49.5%;
+  border-radius: 80%;
+  background-color: black;
+}
+.second-hand {
+  position: relative;
+  height: 90px;
+  width: 2px;
+  top: 25px;
+  left: 49.5%;
+  border-radius: 80%;
+  background-color: rgb(255, 195, 45);
+}
+
+
+ul {
+  list-style: none;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+}
+
+li {
+  position: absolute;
+  transform-origin: 50% 100%;
+  height: 120px;
+}
+
+.hours {
+  top: -2%;
+  left: 33%;
+  font-size: 23px;
+  letter-spacing: -1.6px;
+  line-height: 45px;
+}
+.hours li {
+  width: 80px;
+}
+.hours span {
+  display: block;
+}
+.hours li:nth-of-type(1) {
+  transform: rotate(30deg);
+}
+.hours li:nth-of-type(1) span {
+  transform: rotate(-30deg);
+}
+.hours li:nth-of-type(2) {
+  transform: rotate(60deg);
+}
+.hours li:nth-of-type(2) span {
+  transform: rotate(-60deg);
+}
+.hours li:nth-of-type(3) {
+  transform: rotate(90deg);
+}
+.hours li:nth-of-type(3) span {
+  transform: rotate(-90deg);
+}
+.hours li:nth-of-type(4) {
+  transform: rotate(120deg);
+}
+.hours li:nth-of-type(4) span {
+  transform: rotate(-120deg);
+}
+.hours li:nth-of-type(5) {
+  transform: rotate(150deg);
+}
+.hours li:nth-of-type(5) span {
+  transform: rotate(-150deg);
+}
+.hours li:nth-of-type(6) {
+  transform: rotate(180deg);
+}
+.hours li:nth-of-type(6) span {
+  transform: rotate(-180deg);
+}
+.hours li:nth-of-type(7) {
+  transform: rotate(210deg);
+}
+.hours li:nth-of-type(7) span {
+  transform: rotate(-210deg);
+}
+.hours li:nth-of-type(8) {
+  transform: rotate(240deg);
+}
+.hours li:nth-of-type(8) span {
+  transform: rotate(-240deg);
+}
+.hours li:nth-of-type(9) {
+  transform: rotate(270deg);
+}
+.hours li:nth-of-type(9) span {
+  transform: rotate(-270deg);
+}
+.hours li:nth-of-type(10) {
+  transform: rotate(300deg);
+}
+.hours li:nth-of-type(10) span {
+  transform: rotate(-300deg);
+}
+.hours li:nth-of-type(11) {
+  transform: rotate(330deg);
+}
+.hours li:nth-of-type(11) span {
+  transform: rotate(-330deg);
+}
+.hours li:nth-of-type(12) {
+  transform: rotate(360deg);
+}
+.hours li:nth-of-type(12) span {
+  transform: rotate(-360deg);
+}

@@ -1,0 +1,159 @@
+<html>
+  <head>
+    <style>
+      #body {
+        font-family: "Arial", sans-serif;
+        background-color: #b6ffe2;
+        margin: 0;
+        padding: 40px;
+      }
+      form {
+        width: 60%;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+      fieldset {
+        border: none;
+        margin-bottom: 30px;
+      }
+      legend {
+        font-weight: bold;
+        color: #555;
+      }
+      table {
+        width: 100%;
+      }
+			input[type="text"],
+			input[type="email"],
+			input[type="date"],
+			input[type="tel"],
+			textarea,
+			select,
+			input[type="checkbox"]{
+				width :calc(100% -20px); 
+				padding :10px; 
+				margin-bottom :10px; 
+				border-radius :5px; 
+				border :2px solid #ccc; 
+				outline:none; 
+				transition:border-color .5s ease-in-out;  
+				
+			}
+			
+			input[type="text"]:focus,
+			input[type="email"]:focus,
+			input[type="date"]:focus,
+			input[type="tel"]:focus,
+			textarea:focus,
+		  select:focus{
+					border-color:#00e5ff; 
+				
+		  }
+
+      input[type="submit"],
+      input[type="reset"]{
+        background-color: #00e5ff;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin: 20px;
+        transition: 0.3s ease-in-out; 
+      }
+
+      input[type="submit"]:hover,
+      input[type="reset"]:hover{
+        background-color: #00cce3d8;
+        box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
+      }
+			
+		  input[type="checkbox"]{
+					margin-right :5px;  
+				
+		  }
+
+    </style>
+  </head>
+  <div id="body">
+    <form>
+      <h1 align="center">Registration Form</h1>
+      <fieldset>
+        <legend><h2>Personal Details</h2></legend>
+        <table cellspacing="0" cellpadding="5">
+          <tr>
+            <td>Name:</td>
+            <td><input type="text" name="un" id="un" /></td>
+          </tr>
+          <tr>
+            <td>Email:</td>
+            <td><input type="email" /></td>
+          </tr>
+          <tr>
+            <td>Gender:</td>
+            <td><input type="radio" name="gen" />M
+            <input type="radio" name="gen" />F</td>
+          </tr>
+          <tr>
+            <td>Languages:</td>
+            <td><input type="checkbox" name="lan" />T
+            <input type="checkbox" name="lan" />E
+            <input type="checkbox" name="lan" />H</td>
+          </tr>
+          <tr>
+            <td>Religion:</td>
+            <td>
+              <select name="rel" id="rel1">
+                <option value="HINDU">hindu</option>
+                <option value="CHRISTIAN">christian</option>
+                <option value="MUSLIM">muslim</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Date of Birth:</td>
+            <td><input type="date" name="dob" /></td>
+          </tr>
+          <tr>
+            <td>Mobile:</td>
+            <td><input type="tel" name="mob" /></td>
+          </tr>
+          <tr>
+            <td>Address:</td>
+            <td>
+              <textarea name="add" id="add" cols="20" rows="5"></textarea>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <fieldset>
+        <legend><h2>Education Details</h2></legend>
+        <table>
+          <tr>
+            <td>Btech% :</td>
+            <td><input type="text" /></td>
+          </tr>
+          <tr>
+            <td>Inter% :</td>
+            <td><input type="text" /></td>
+          </tr>
+          <tr>
+            <td>SSC% :</td>
+            <td><input type="text" /></td>
+          </tr>
+        </table>
+      </fieldset>
+      <table width="100%" align="center">
+        <tr>
+          <td align="center"><input type="submit" name="submit" /></td>
+          <td align="center"><input type="reset" name="reset1" /></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

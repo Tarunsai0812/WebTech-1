@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Page Title</title>
+    <style>
+      * {
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        background-color: #f5f5f5;
+      }
+
+      .header-image {
+        width: 100px;
+        height: auto;
+      }
+
+      .marquee-container {
+        flex-grow: 1;
+        padding-left: 20px;
+      }
+
+      .main-container {
+        display: flex;
+      }
+
+      #left {
+        width: 20%;
+        background-color: #e6e6e6;
+        padding: 10px;
+      }
+
+      .right {
+        flex-grow: 1;
+        padding: 10px;
+      }
+
+      .navbar {
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0;
+      }
+
+      .navbar li {
+        margin-left: 10px;
+      }
+
+      #right-section{
+        min-width: 90%;
+        min-height: 100%;
+    }
+
+      #content-display {
+        min-width: 100%;
+        min-height: 100%;
+        margin-top: 20px;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        width="100px"
+        height="80px"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJp7g0j3bMYfnK9ZwQD5lTPDTGeOB052qcGNiCdUcZ9w&s"
+        alt="anits logo"
+        class="header-image"
+      />
+      <div class="marquee-container">
+        <marquee
+          ><h1>
+            ANIL NEERUKONDA INSTITUTE OF TECHNOLOGY AND SCIENCES
+          </h1></marquee
+        >
+      </div>
+    </header>
+    <div class="main-container">
+      <aside id="left">
+        <!-- Buttons here -->
+        <ul>
+          <h1>Departments</h1>
+          <button onclick="loadContent('csedetails.html')">CSE</button>
+          <button onclick="loadContent('ecedetails.html')">ECE</button>
+          <button onclick="loadContent('itdetails.html')">IT</button>
+          <h1>Universities Info</h1>
+          <button onclick="loadContent('university.html')">Universities</button>
+          <h1>Personal Info</h1>
+          <button onclick="loadContent('resume.html')">Resume</button>
+          <h1>Game</h1>
+          <button onclick="loadContent('game.html')">Tetris</button>
+        </ul>
+        <button onclick="loadContent('page1.html')">Page 1</button>
+        <!-- Add more buttons as needed -->
+      </aside>
+      <div id="right-section">
+        <nav>
+          <ul class="navbar">
+            <li><button onclick="loadContent('login.html')">Login</button></li>
+            <li>
+              <button onclick="loadContent('registration.html')">Register</button>
+            </li>
+          </ul>
+        </nav>
+        <div id="content-display">
+          <div id="right">
+            <!-- Content will be displayed here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function loadContent(page) {
+        document.getElementById("right").innerHTML =
+          '<iframe src="' +
+          page +
+          '" width="100%" height="100%" frameborder="0"></iframe>';
+      }
+    </script>
+  </body>
+</html>
